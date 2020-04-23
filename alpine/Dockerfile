@@ -1,5 +1,6 @@
 FROM alpine:3.10
-
+RUN apk update
+RUN apk upgrade
 RUN apk add --no-cache ca-certificates libstdc++ su-exec
 RUN set -eux; \
     addgroup -g 9987 ts3server; \
